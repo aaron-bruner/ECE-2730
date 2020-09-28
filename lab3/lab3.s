@@ -8,7 +8,7 @@ classify:
     pushl %ebx
     movl %esp, %ebp
 
-    . . .
+
 
     return:
     /* epilog */
@@ -18,5 +18,10 @@ classify:
     ret
 
 /* declare variables here */
+
+.comm i, 4
+.comm j, 4
+.comm k, 4
+.comm tri_type, 4
 
 /* end assebmly stub */
