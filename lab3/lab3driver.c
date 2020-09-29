@@ -28,6 +28,7 @@ int main (int argc, char **argv)
             printf("This is a Scalene triangle.\n");
             break;
         default:
+            printf("Invalid triangle type returned.\n");
     }
     return 0;
 }
