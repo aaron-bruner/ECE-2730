@@ -1,5 +1,7 @@
 /* begin assembly solution */
 
+/* Just a side note; I had issues working on this before class since the CU VPN went down. You asked us to post that here. */
+
 /*
 * FUNCTION     AtoI
 * ARGUMENTS    N/A (We are using global variables)
