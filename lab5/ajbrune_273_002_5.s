@@ -4,7 +4,7 @@
 * FUNCTION     Fib
 * ARGUMENTS    N/A (We are using global variables)
 * RETURNS      N/A
-* PURPOSE      This function handles the input from the stdin pipeline and does some checks to ensure we reprint the same ASCII representation.
+* PURPOSE      This function handles the varying variables in the main function (i) and determins the Fibonacci sequence.
 */
 .globl Fib
 .type Fib,@function
@@ -28,16 +28,16 @@ Fib:
     movl %eax, global_var # global_var = local_var - 1;
 
     call Fib
-    movl global_var, %eax   # eax = global var
-    movl %eax, -8(%ebp)     # temp_var = ebx
-    movl -4(%ebp), %eax     # ecx = local_var
+    movl global_var, %eax
+    movl %eax, -8(%ebp)
+    movl -4(%ebp), %eax
     subl $2, %eax           # local_var -= 2
     movl %eax, global_var   # global_var = local_var - 2
 
     call Fib
     movl global_var, %eax   # eax = global_var
     movl -8(%ebp), %ebx
-    addl %eax, %ebx         # edx = edx + eax
+    addl %eax, %ebx         # ebx += eax
     movl %ebx, global_var   # global_var = temp_var
     jmp return
 
